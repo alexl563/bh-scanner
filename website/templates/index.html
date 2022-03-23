@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/css/home.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belmont Hill Scanner</title>
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <div class="nav-wraper">
+        <nav id="nav">
+            <div class="logo">
+                <a href="/"></a>
+                <img src="static/pictures/bh-sextant.png" class="nav-image">
+            </div>
+            <div class="nav-spacer"></div>
+            <ul class="nav-links">
+                <li class="one"><a href="/">tutorial</a></li>
+                <li class="one"><a href="about.html">about</a></li>
+                <li><a href="contact.html">team</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="checkin-banner">Check In For {{month + "/" + day + "/" + year}}</div>
+
+    {% for result in front_results %}
+    <div class="student-container">
+        <div class="student-name">{{result["name"]}}</div>
+        <div class="{{("badge-green" if result["checked-in"] else "badge-red")}}">{{("checked in" if result["checked-in"] else "not checked in")}}</div>
+        <div class="student_time">{{result["time"]}}</div>
+
+    </div>
+    {% endfor %}
+
 </body>
 </html>

@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.nav-wraper{
+    min-height:12vh;
+}
+
+#nav{
+    height:12vh;
+    background-color: white;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height:10vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+   
+}
+
+.logo{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.logo a{
+    font-size:40px;
+    text-decoration:none;
+    color:black;
+}
+
+.nav-image{
+    width:70px;
+
+}
+
+.nav-spacer{
+    height:2px;
+    width:35%;
+}
+
+.nav-links{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.nav-links li{
+    font-size:20px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:black;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 1px solid black;
+  }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+.burger{
+    display:none;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.burger div{
+    width:25px;
+    height:2px;
+    margin:5px;
+    background-color:black;
+    transition: all 0.3s ease;
+}
+
+.one{
+    margin-right:20%;
+}
+
+@media screen and (max-width:768px){
+
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position:absolute;
+        right:0;
+        height:100vh;
+        background-color: white;
+        top:12vh;
+        display:flex;
+        flex-direction:column;
+        z-index: 1;
+        width:50vw;
+        justify-content: space-around;
+        align-items: center;
+        transform:translateX(100%);
+        transition:ease-in .5s;
+    }
+
+    .one{
+        margin-right:0;
+    }
+
+    .burger{
+        display:block;
+    }
+}
+.nav-active{
+    transform:translateX(0%);
+}
+
+.toggle .line1{
+    transform: translate(-2px,4px)rotate(-45deg);
+}
+.toggle .line2{
+    opacity:0;
+}
+.toggle .line3{
+    transform: translate(-2px,-9.5px)rotate(45deg);
+}
+
+
+  footer{
+    background-color: #363333;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:15vh;
+    width:100%;
+    color:white;
+}
+
+#footer-text a{
+    font-size:20px;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.footer-middle-text{
+    color:white;
+    text-align:center;
+    width:40%;
+}
+
+.footer-middle-text a{
+  font-size:20px;
+}
+
+
+.fa {
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  margin-left:10px;
+}
+
+
+/*other stuff starts*/
+.student-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.checkin-banner {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.student-name {
+    margin-right: 20px;
+}
+
+.student_time {
+    margin-left: 20px;
+}
+
+.badge-green {
+	display: inline-block;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.75rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	border: 1px solid transparent;
+    background-color: #2b9348;
+    border-color: green;
+}
+
+.badge-red {
+    display: inline-block;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.75rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	border: 1px solid transparent;
+    background-color: #ea3546;
+    border-color: red;
+
+}
